@@ -1,0 +1,109 @@
+<DOCTYPE html>
+	<html lang="en-US">
+		<head>
+			<title></title>
+			<link type="text/css" rel="stylesheet" href="tester.css">
+			<script type = "text/javascript" src="jquery-2.1.4.min.js"></script>
+		</head>
+		<body>
+			</thead>
+					<tbody>
+						<tr><table cellspacing="30">
+							<td id = "rubyonrails">
+								<a href="#"><img src="img/languages/ruby.jpg"></a>
+							</td>
+							<td id="nodejs"><a href="#"><img src="img/languages/nodejs.jpg"></a></td>
+							<td id = "javascript"><a href="#"><img src="img/languages/javascript.jpg"></a></td>
+							<td id = "jquery"><a href="#"><img src="img/languages/jquery.jpg"></a></td>
+						</tr>
+						<tr><table cellspacing="30">
+							<td id = "html"><a href="#"><img src="img/languages/html.jpg"></a></td>
+							<td id = "css"><a href="#"><img src="img/languages/css.jpg"></a></td>
+							<td id = "bootstrap"><a href="#"><img src="img/languages/bootstrap.jpg"></a></td>
+							<td id = "none"><a href="#"><img src=""></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="infoBox">
+						<h1></h1>
+						<p></p>
+						<a href="#">CLOSE</a>
+					</div>
+					
+		<script type="text/javascript">
+			$(document).ready(function() {
+	var rubyText = "Ruby on Rails, or simply Rails, is a web application framework written in Ruby under MIT License. Rails is a model view controller MVC framework, providing default structures for a database, a web service, and web pages.";
+	var nodeText = "Node.js is an open-source, cross-platform runtime environment for developing server-side web applications. Node.js applications are written in JavaScript and can be run within the Node.js runtime on a wide variety of platforms, including OS X, Microsoft Windows, Linux, FreeBSD, NonStop, IBM AIX, IBM System z and IBM i.";
+	var javascriptText = "an object-oriented computer programming language commonly used to create interactive effects within web browsers.";
+	var jqueryText = "a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.";
+	var htmlText = "HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It was finalized, and published, on 28 October 2014 by the World Wide Web Consortium W3C. This is the fifth revision of the HTML standard since the inception of the World Wide Web.";
+	var cssText = "<h1>CSS</h1>";
+	var bootstrapText = "<h1>Bootstrap</h1>";
+
+				$('#rubyonrails').click(function() {
+					$('#nodejs, #javascript, #jquery, #html, #css, #bootstrap, #none').toggle(0);
+					$('#rubyonrails img').toggleClass('bigger');
+					$('#infoBox').slideToggle(200);
+					$('#infoBox h1').text("Ruby on Rails");
+					$('#infoBox p').text(rubyText);
+				})
+
+				$('#nodejs').click(function() {
+				  $('#rubyonrails, #javascript, #jquery, #html, #css, #bootstrap, #none').toggle(0);
+				  $('#nodejs img').toggleClass('bigger');
+				  $('#infoBox').toggle();
+				  $('#infoBox h1').text('Node.js');
+				  $('#infoBox p').text(nodeText);
+				})
+
+				$('#javascript').click(function() {
+				  $('#rubyonrails, #nodejs, #jquery, #html, #css, #bootstrap, #none').toggle(0);
+					 $('#javascript img').toggleClass('bigger');
+					 $('#infoBox').toggle();
+					$('#infoBox h1').text("JavaScript");
+					$('#infoBox p').text(javascriptText);
+				})
+
+				$('#jquery').click(function() {
+				  $('#rubyonrails, #nodejs, #javascript, #html, #css, #bootstrap, #none').toggle(0);
+					 $('#jquery img').toggleClass('bigger');
+					 $('#infoBox').toggle();
+					$('#infoBox h1').text("jQuery");
+					$('#infoBox p').text(jqueryText);
+				})
+
+				$('#html').click(function() {
+				  $('#rubyonrails, #nodejs, #javascript, #jquery, #css, #bootstrap, #none').toggle(0);
+					 $('#html img').toggleClass('bigger');
+					 $('#infoBox').toggle();
+					$('#infoBox h1').text("HTML5");
+					$('#infoBox p').text(htmlText);
+				})
+
+				$('#css').click(function() {
+				  $('#rubyonrails, #nodejs, #javascript, #jquery, #html, #bootstrap, #none').toggle(0);
+					 $('#css img').toggleClass('bigger');
+					 $('#infoBox').toggle();
+					$('#infoBox h1').text("Ruby on Rails");
+					$('#infoBox p').text(rubyText);
+				})
+
+				$('#bootstrap').click(function() {
+				  $('#rubyonrails, #nodejs, #javascript, #jquery, #html, #css, #none').toggle(0);
+					 $('#bootstrap img').toggleClass('bigger');
+					 $('#infoBox').toggle();
+					$('#infoBox h1').text("Ruby on Rails");
+					$('#infoBox p').text(rubyText);
+				})
+
+				$('#none').click(function() {
+				  $('#rubyonrails, #nodejs, #javascript, #jquery, #html, #css, #bootstrap').toggle(0);
+					 $('#none img').toggleClass('bigger');
+					 $('#infoBox').toggle();
+					$('#infoBox h1').text("Ruby on Rails");
+					$('#infoBox p').text(rubyText);
+				})
+			});
+		</script>
+		</body>
+	</html>
